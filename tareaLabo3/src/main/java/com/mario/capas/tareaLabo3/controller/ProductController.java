@@ -37,7 +37,7 @@ public class ProductController {
 	public ModelAndView validar(Product product) {
 		ModelAndView mav =new ModelAndView();
 		Product p = productos.get(product.getId());
-		mav.addObject("pnombre",p.getNombre());
+		mav.addObject("producto",p);
 		
 		if(product.getCantidad()<=p.getCantidad()) {
 			mav.setViewName("compra");
